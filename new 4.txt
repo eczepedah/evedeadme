@@ -1,0 +1,89 @@
+sapjmp2db 172.27.203.128
+sapjmp2db_mensual_inc -----> dsmc i -subdir=yes "/usr/sap/JMP/*" "/oracle/client/*" > /patrol/respaldos/logs/sapjmp2db_mensual_inc.log
+sapjmp2db_semestral_inc ----> dsmc i -subdir=yes "/usr/sap/DAA/*"  > /patrol/respaldos/logs/sapjmp2db_semestral_inc.log
+
+crmpweb5 172.27.203.88 
+crmpweb5_diario_inc ------> dsmc i > /patrol/respaldos/logs/crmpweb5_diario_inc.log
+
+sapjmpdb 172.27.203.127
+sapjmpdb_mensual_inc --->dsmc i -subdir=yes "/usr/sap/JMP/*" "/sapmnt/JMP/*" > /patrol/respaldos/logs/sapjmpdb_mensual_inc.log
+sapjmpdb_semestral_inc ---->dsmc i -subdir=yes "/usr/sap/trans/*" "/oracle/client/*" "/usr/sap/DAA/*" > /patrol/respaldos/logs/sapjmpdb_semestral_inc.log
+sapjmpdb_diario_full_JMP -----> /backup/catalyst/resp_full/respFull_JMP.sh
+sapjmpdb_diario_logs_JMP ---> /backup/catalyst/resp_logs/respLogs_JMP.sh
+
+crmpweb1 172.27.203.49
+crmpweb1_mensual_inc  ---> dsmc i -subdir=yes "/usr/*" "/home/*" "/ctmagent/*" "/u02/*" > /patrol/respaldos/logs/crmpweb1_mensual_inc.log
+crmpweb1_semanal_inc ----> dsmc i -subdir=yes "/u01/*" > /patrol/respaldos/logs/crmpweb1_semanal_inc.log
+
+crmpweb2 172.27.203.51
+crmpweb2_semanal_inc ---> dsmc i -subdir=yes "/u01/*" > /patrol/respaldos/logs/crmpweb2_semanal_inc.log
+crmpweb2_mensual_inc ----> dsmc i -subdir=yes "/usr/*" "/home/*" "/ctmagent/*" "/u02/*" > /patrol/respaldos/logs/crmpweb2_mensual_inc.log
+
+crmpweb6 172.27.203.89
+crmpweb6_diario_inc -------> dsmc i > /patrol/respaldos/logs/crmpweb6_diario_inc.log
+
+crmpapp3 172.27.203.42
+
+crmpapp3_mensual_inc ------> dsmc i -subdir=yes "/usr/*" "/home/*" "/ctmagent/*" "/u02/*" > /patrol/respaldos/logs/crmpapp3_mensual_inc.log
+crmpapp3_semanal_inc -------> dsmc i -subdir=yes "/u01/*" > /patrol/respaldos/logs/crmpapp3_semanal_inc.log
+
+sappmdapp 172.16.204.12
+
+sappmdapp_mensual_inc_172.16.204.12 ---> dsmc i -subdir=yes "/home/*" "/usr/sap/PMD/*" "/sapmnt/PMD/*" "/interfase/*" "/usr/sap/trans/*"
+
+sapjmddb 172.16.204.240
+sapjmddb_semestral_inc ---> dsmc i -subdir=yes "/oracle/client/*"
+sapjmddb_trimestral_inc ----> dsmc i -subdir=yes "/usr/sap/JMD/*" "/sapmnt/JMD/*" "/usr/sap/trans/*" "/usr/sap/DAA/*"
+sapjmddb_semanal_full_JMD---> /backup/catalyst/resp_full/respFull_JMD.sh
+sapjmddb_semanal_inc_JMD ---> /backup/catalyst/resp_incr/respIncr_JMD.sh
+sapjmddb_logs_diario_JMD --> /backup/catalyst/resp_logs/respLogs_JMD.sh
+
+mtyexapnj29 172.17.212.214
+mtyexapnj29_diario_fs
+
+mtyexapnj30 172.17.212.215
+mtyexapnj30_diario_fs
+
+mtyexapnj31 172.17.212.216
+mtyexapnj31_diario_fs
+
+mtyexapnj32 172.17.212.217
+mtyexapnj32_diario_fs
+
+crmpapp2 172.27.203.41
+crmpapp2_mensual_inc ---> dsmc i -subdir=yes "/usr/*" "/home/*" "/ctmagent/*" "/u02/*" > /patrol/respaldos/logs/crmpapp2_mensual_inc .log
+
+crmpapp2_semanal_inc ----->  dsmc i -subdir=yes "/u01/*" > /patrol/respaldos/logs/crmpapp2_semanal_inc.log
+
+*crmpapp4 172.27.203.43
+crmpapp4_mensual_inc ---> dsmc i -subdir=yes "/usr/*" "/home/*" "/ctmagent/*" "/u02/*" > /patrol/respaldos/logs/crmpapp4_mensual_inc.log
+
+crmpapp4_semanal_inc -----> dsmc i -subdir=yes "/u01/*" > /patrol/respaldos/logs/crmpapp4_semanal_inc.log
+
+mtycrmpdb01 172.17.202.46
+*mtycrmpdb01_diario_fs ---> dsmc i -subdir=yes > /ctmagent/respaldos/logs/mtycrmpdb01_diario_fs.log
+
+mtycrmpdb02 172.17.202.47
+*mtycrmpdb02_diario_fs --->dsmc i -subdir=yes > /ctmagent/respaldos/logs/mtycrmpdb02_diario_fs.log
+
+mtysmtpap02 172.17.202.14
+******mtysmtpap02_diario_inc_fs
+
+mtysmtpap01	172.17.202.13
+mtysmtpap02	172.17.202.14
+stfsmtpap03	172.22.209.132
+
+mtysmtpap02 172.17.202.14
+******mtysmtpap02_diario_inc_fs
+
+172.22.209.172 dev-itsm2
+dev-itsm2_mensual_inc
+dev-itsm2_diario_fs
+dev-itsm2_semanal_inc
+
+*172.22.209.175 stfremdws02
+stfremdws02_diario_fs
+
+Se da de baja el respaldo del equipo 172.16.212.106  mdfcdev2
+*mdfcdev2_semanal_inc.
+
